@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="template" type="color_filter.py" name="color_filter" output="screen">
+    <param name="color" value="$(arg color)"/>
+  </node> 
+  <node pkg="rqt_image_view" type="rqt_image_view" name="rqt_image_view_original" args="/usb_cam/image_raw"/>
+  <node pkg="rqt_image_view" type="rqt_image_view" name="rqt_image_view_filtered" args="/usb_cam/filtered_image"/>
+</launch>
